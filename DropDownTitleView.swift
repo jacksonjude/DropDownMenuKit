@@ -26,7 +26,7 @@ open class DropDownTitleView : UIControl {
 			}
 			return podBundle
 		} else {
-			return Bundle.sm_frameworkBundle()
+			return bundle
 		}
 	}()
 	open lazy var menuDownImageView: UIImageView = {
@@ -109,6 +109,9 @@ open class DropDownTitleView : UIControl {
 	}
 
 	open func imageNamed(_ name: String) -> UIImage {
+		if let image = UIImage(named: name, in: Bundle.module, compatibleWith: nil) {
+			return image
+		}
 		return UIImage(named: name, in: imageBundle, compatibleWith: nil)!
 	}
 
