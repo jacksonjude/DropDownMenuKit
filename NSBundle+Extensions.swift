@@ -25,7 +25,7 @@ extension Bundle {
             Bundle.main.bundleURL,
         ]
 
-        let bundleName = "DropDownMenuKit"
+        let bundleName = "DropDownMenuKitAssets"
 
 		for candidate in candidates {
 			let bundlePath = candidate?.appendingPathComponent(bundleName + ".bundle")
