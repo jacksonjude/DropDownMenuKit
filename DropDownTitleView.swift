@@ -14,7 +14,7 @@ open class DropDownTitleView : UIControl {
 			setNeedsLayout()
 		}
 	}
-	// When compiling as a static library with CocoaPods, image assets end ups in the main bundle 
+	// When compiling as a static library with CocoaPods, image assets end ups in the main bundle
 	// rather than the framework bundle:
 	// AppName.app/Resources/DropDownMenuKit/Assets.car
 	lazy var imageBundle: Bundle = {
@@ -26,7 +26,7 @@ open class DropDownTitleView : UIControl {
 			}
 			return podBundle
 		} else {
-			return bundle
+			return Bundle.sm_frameworkBundle()
 		}
 	}()
 	open lazy var menuDownImageView: UIImageView = {
